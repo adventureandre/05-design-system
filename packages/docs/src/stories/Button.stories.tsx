@@ -4,11 +4,20 @@ import { Meta, StoryObj } from '@storybook/react'
 export default {
   title: 'Form/Button',
   component: Button,
-  args: { children: 'enviar' },
+  args: {
+    children: 'Send',
+  },
 } as Meta<ButtonProps>
 
 export const Primary: StoryObj<ButtonProps> = {}
+export const Secondary: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'secondary',
+  },
+}
 
-export const Big: StoryObj<ButtonProps> = {
-  args: { size: 'small' },
+export const Tertiary: StoryObj<ButtonProps> = {
+  args: {
+    variant: 'tertiary',
+  },
 }
