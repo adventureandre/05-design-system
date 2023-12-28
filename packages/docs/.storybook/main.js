@@ -28,5 +28,11 @@ const config = {
   docs: {
     autodocs: "tag",
   },
+  viteFinal: (viteConfig, { command, mode }) => {
+    if (mode === 'production') {
+      viteConfig.base = '/05-design-system/';
+    }
+    return viteConfig;
+  },
 };
 export default config;
